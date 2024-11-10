@@ -20,11 +20,11 @@ This is a simple demo project built with FastAPI, a high-performance web framewo
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/fastapi-demo.git
-    cd fastapi-demo
+    git clone git@github.com:tootapi/Fastapi.git
+    cd Fastapi
     ```
 
-2. **Create a virtual environment** (recommended):
+2. **Create a virtual environment** (Ignore this):
 
     ```bash
     python3 -m venv venv
@@ -34,13 +34,7 @@ This is a simple demo project built with FastAPI, a high-performance web framewo
 3. **Install dependencies**:
 
     ```bash
-    pip install -r requirements.txt
+    docker compose build 
+    docker compose up 
     ```
-
-   If `requirements.txt` doesn't exist, you can manually install the main dependencies:
-
-    ```bash
-    pip install fastapi uvicorn
-    ```
-
-## Project Structure
+    
