@@ -1,0 +1,25 @@
+version: "3.4"
+services:
+  ceph-drive-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/app
+    networks:
+      - ceph_default 
+  ceph-drive-database:
+    build:
+      context: .
+      dockerfile: PocketDb
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./PocketDatabase:/PocketDatabase
+    networks:
+        - ceph_default
+networks:
+  ceph_default:
+    driver: bridge
